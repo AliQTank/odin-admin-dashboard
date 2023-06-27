@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.sidebar {
+    background-color: pink;
+    grid-row: 1/6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.header {
+    background-color: goldenrod;
+}
+
+.main-content {
+    background-color: turquoise;
+    grid-row: 2/6;
+}
+
+.sidebar>div,
+.sidebar>a {
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
