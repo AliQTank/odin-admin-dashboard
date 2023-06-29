@@ -2,6 +2,7 @@
 
 :root {
     --color-clear-blue: rgb(10, 103, 122);
+    --color-golden-globes: rgb(233 184 40);
 }
 
 * {
@@ -17,6 +18,10 @@ body {
     overflow: hidden;
 }
 
+img {
+    border-radius: 50%;
+}
+
 .container {
     height: 100vh;
     display: grid;
@@ -30,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-left: 1rem;
 }
 
@@ -40,38 +45,89 @@ body {
     text-decoration: none;
     margin-bottom: 2rem;
     color: azure;
+    display: -webkit-inline-box
 }
 
 .sidebar>a>span,
 .sidebar>div>span {
     vertical-align: top;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .header {
-    background-color: rgb(20, 177, 149);
+    background-color: var(--color-golden-globes);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr ;
 }
 
-/* .header>div {
-    padding-left: 15px;
-} */
+.header .iconic {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    place-self: center;
+}
+
+.header .iconic span {
+    vertical-align: top;
+}
 
 .header input[type="text"] {
     border-radius: 25px;
     margin-top: 15px;
     margin-left: 45px;
-    width: 850px;
+    width: 700px;
 }
 
+.header #profile-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    align-items: center;
+}
+
+.header #profile-bar .clicker img {
+    width: 45px;
+}
+
+.header .interactive-buttons {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 4fr;
+}
+
+.header .interactive-buttons .theserandombuttons1:nth-child(1) {
+    grid-row: 1/3;
+    place-self: center;
+}
+
+.header .interactive-buttons .theserandombuttons1 img {
+    width: 70px;
+}
+
+.header .interactive-buttons .theserandombuttons1:nth-child(2) {
+    align-self: end;
+    font-size: 14px;
+}
+
+
+
 .header button {
-    border-radius: 15px;
-    width: 90px;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    margin: 5px;
     background-color: var(--color-clear-blue);
     color: white;
+    text-transform: capitalize;
+}
+
+.header .action-buttons {
+    place-self: center self-start;
+    /* justify-self: self-start;
+    align-self: center; */
 }
 
 .main-content {
-    background-color: turquoise;
+    background-color: var(--color-clear-blue);
     grid-row: 2/6;
     display: grid;
     grid-template: 1fr 1fr/ 4fr 1fr;
@@ -84,7 +140,7 @@ body {
 }
 
 .main-content>div {
-    background-color: gray;
+    background-color: white;
     padding: 10px;
 }
 
