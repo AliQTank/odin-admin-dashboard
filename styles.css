@@ -14,22 +14,42 @@
     font-size: 20px;
 }
 
-body {
-}
-
 img {
     border-radius: 50%;
+    width: 40px;
+}
+
+button {
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    margin: 5px;
+    background-color: var(--color-clear-blue);
+    color: white;
+    text-transform: capitalize;
+}
+
+h2 {
+    position: absolute;
+    visibility: hidden;
+}
+
+h4 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns:1fr 7fr;
+    grid-template-rows:1fr 5fr;
 }
 
 .sidebar {
     background-color: var(--color-clear-blue);
-    grid-row: 1/6;
+    grid-row: 1/-1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -58,76 +78,106 @@ img {
 
 .header {
     background-color: var(--color-golden-globes);
+    grid-column-start: 2;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-.header .iconic {
+.header #first-line-header {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    place-self: center;
+    grid-template-columns: 50px repeat(10, 1fr);
+    align-items: center;
 }
 
-.header .iconic span {
-    vertical-align: top;
+.header #first-line-header .searcher {
+    grid-column-start: 2;
 }
 
 .header input[type="text"] {
     border-radius: 25px;
-    margin-top: 15px;
-    margin-left: 45px;
-    width: 700px;
+    width: 600px;
 }
 
-.header #profile-bar {
+.header #first-line-header form {
+    grid-column: 3/span 4;
+}
+
+.header #first-line-header #bell {
+    grid-column-start: 8;
+}
+
+.header #second-line-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-columns: 50px repeat(10, 1fr);
+    grid-template-rows: 1fr 1fr;
     align-items: center;
 }
 
-.header #profile-bar .clicker img {
-    width: 45px;
-}
 
-.header .interactive-buttons {
-    display: grid;
-    grid-template: 1fr 1fr/1fr 4fr;
-}
 
-.header .interactive-buttons .theserandombuttons1:nth-child(1) {
+.header #second-line-header .theserandombuttons:nth-child(1) {
+    grid-column-start: 2;
     grid-row: 1/3;
-    place-self: center;
 }
 
-.header .interactive-buttons .theserandombuttons1 img {
-    width: 70px;
+.header #second-line-header .theserandombuttons:nth-child(1) img {
+    width: 60px;
 }
 
-.header .interactive-buttons .theserandombuttons1:nth-child(2) {
-    align-self: end;
-    font-size: 14px;
+.header #second-line-header .theserandombuttons:nth-child(2) {
+    font-size: 16px;
+    grid-column: 3/ span 3
+}
+
+.header #second-line-header .theserandombuttons:nth-child(3) {
+    grid-column: 3/ span 3;
+}
+
+.header #second-line-header .first-button {    
+    grid-column-start: 8;
+    grid-row: 1/3;
+}
+
+.header #second-line-header .second-button {
+    grid-column-start: 9;
+    grid-row: 1/3;
+}
+
+.header #second-line-header .third-button {
+    grid-column-start: 10;
+    grid-row: 1/3;
 }
 
 
 
-.header button {
-    border-radius: 20px;
-    width: 120px;
-    height: 40px;
-    border: 0;
-    margin: 5px;
-    background-color: var(--color-clear-blue);
-    color: white;
-    text-transform: capitalize;
-}
-
-.header .action-buttons {
-    /* place-self: center self-start; */
-    justify-self: self-start;
-    align-self: center;
-}
 
 .main-content {
+    grid-row: 2/-1;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: black;
+}
+
+.main-content #projects {
+    padding: 40px;
+    grid-row: 1/span 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+}
+
+.main-content #projects .projects {
+    padding: 20px;
+    background-color: var(--color-clear-blue);
+    color: white;
+    height: 200px;
+    border-left: 10px solid var(--color-golden-globes);
+    border-radius: 10px;
+}
+
+/* .main-content {
     background-color: var(--color-clear-blue);
     grid-row: 2/6;
     display: grid;
@@ -168,12 +218,9 @@ img {
     top: 140px;
 }
 
-h4 {
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
 
 
+ */
 
  
 
