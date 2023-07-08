@@ -93,6 +93,7 @@ ul {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
+    color: var(--color-clear-blue);
 }
 
 .header #first-line-header {
@@ -177,8 +178,6 @@ ul {
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: gray;
-    /* gap: 10px; */
-
 }
 
 .main-content #projects {
@@ -197,6 +196,16 @@ ul {
     border-left: 10px solid var(--color-golden-globes);
     border-radius: 10px;
     box-shadow: 10px 10px 10px #272626;
+    display: grid;
+    grid-template-rows: 15% 1fr 10%;
+}
+
+.main-content #projects .projects ul {
+    display: flex;
+    justify-content: flex-end;
+    /* display: grid;
+    grid-auto-flow: column;
+    justify-self: end; */
 }
 
 .main-content #news {
